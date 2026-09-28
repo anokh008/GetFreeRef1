@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Web Design</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f7ff;
+      color:#111;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:#050816;
+      color:white;
+    }
+
+    nav h2{
+      color:#7b61ff;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#7b61ff;
+    }
+
+    .btn{
+      background:#7b61ff;
+      padding:12px 25px;
+      border:none;
+      border-radius:8px;
+      color:white;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#5f47e0;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:linear-gradient(to right,#050816,#151c4b);
+      color:white;
+      padding:80px 8%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      max-width:550px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:#7b61ff;
+    }
+
+    .hero-text p{
+      color:#cfcfcf;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:15px;
+    }
+
+    .outline-btn{
+      background:transparent;
+      border:2px solid white;
+    }
+
+    .hero img{
+      width:500px;
+      max-width:100%;
+    }
+
+    /* SERVICES */
+
+    .services{
+      padding:80px 8%;
+      text-align:center;
+    }
+
+    .services h2{
+      font-size:40px;
+      margin-bottom:50px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      margin:20px 0;
+      color:#7b61ff;
+    }
+
+    .card p{
+      color:#666;
+      line-height:1.6;
+    }
+
+    /* ABOUT */
+
+    .about{
+      padding:80px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    .about img{
+      width:450px;
+      max-width:100%;
+      border-radius:20px;
+    }
+
+    .about-text{
+      max-width:500px;
+    }
+
+    .about-text h2{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      color:#555;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#050816;
+      color:white;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero{
+        flex-direction:column;
+      }
+
+      .hero-text h1{
+        font-size:45px;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      nav ul{
+        display:none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <h2>WebNova</h2>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="btn">Get Started</button>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>
+        Build Your Brand.<br>
+        Grow Your <span>Business.</span>
+      </h1>
+
+      <p>
+        We create modern websites and web applications
+        that help businesses stand out and grow faster.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn">Get Started</button>
+        <button class="btn outline-btn">See Work</button>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    alt="Laptop">
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>
+          Modern and beautiful UI/UX website designs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>
+          Fast and responsive websites using latest technologies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>
+          Improve your website ranking and online visibility.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+    alt="Coding">
+
+    <div class="about-text">
+      <h2>We're More Than Developers</h2>
+
+      <p>
+        We combine creativity, strategy, and technology
+        to build stunning digital experiences.
+      </p>
+
+      <button class="btn">Learn More</button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 WebNova. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

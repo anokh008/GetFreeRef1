@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokhpreet Singh | Creative Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="First.css">
+</head>
+
+<body class="theme-midnight">
+    <!-- Custom Mouse Glow Trail -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Animated background elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Floating background particles -->
+    <div class="particles">
+        <div class="particle" style="--size:15px; --left:10%; --delay:0s; --duration:20s;"></div>
+        <div class="particle" style="--size:25px; --left:30%; --delay:2s; --duration:25s;"></div>
+        <div class="particle" style="--size:10px; --left:50%; --delay:4s; --duration:18s;"></div>
+        <div class="particle" style="--size:20px; --left:70%; --delay:1s; --duration:22s;"></div>
+        <div class="particle" style="--size:30px; --left:90%; --delay:5s; --duration:30s;"></div>
+        <div class="particle" style="--size:8px; --left:20%; --delay:3s; --duration:15s;"></div>
+        <div class="particle" style="--size:18px; --left:80%; --delay:6s; --duration:24s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span>A</span>S
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#projects">Work Portal</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="icon-btn" onclick="toggleTheme()" title="Toggle Visual Style">
+                <i class="fa-solid fa-palette"></i>
+            </button>
+            <!-- Admin Inbox Access -->
+            <button id="admin-toggle" class="icon-btn" onclick="openAdminGate()" title="Admin Message Box">
+                <i class="fa-solid fa-inbox"></i>
+                <span id="inbox-count" class="badge-count">0</span>
+            </button>
+            <button class="nav-btn" onclick="openModal()">Get in Touch</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero-container">
+        <div class="hero-content">
+            <span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> HTML & CSS Workspace Hub</span>
+            <h1 class="hero-title">
+                Welcome to my <span class="gradient-text">Creative Hub</span><br>
+                I am a 
+                <span class="text-rotator">
+                    <span class="word">Developer</span>
+                    <span class="word">Designer</span>
+                    <span class="word">Problem Solver</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">My name is Anokhpreet Singh. I design and build modern layouts, custom interactive templates, and beautiful frontends. Explore my active projects below!</p>
+            
+            <div class="cta-group">
+                <a href="#projects" class="btn btn-primary">
+                    Explore Work <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <button class="btn btn-secondary" onclick="openModal()">
+                    Need Help? <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="card-glass">
+                <div class="card-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="card-content">
+                    <pre><code class="code-highlight"><span class="keyword">const</span> hub = {
+  developer: <span class="string">"Anokhpreet Singh"</span>,
+  assignedProjects: <span class="number">3</span>,
+  stack: [<span class="string">"HTML5"</span>, <span class="string">"CSS3"</span>, <span class="string">"JS"</span>],
+  status: <span class="string">"Fully Interactive"</span>
+};
+
+<span class="function">console</span>.<span class="method">log</span>(hub.status);</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Projects / Work Showcase Portal -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2 class="section-title">Assignment Work Portal</h2>
+            <p class="section-subtitle">Click on any card to view the live responsive mockups created in this workspace.</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1: Quora Mockup -->
+            <a href="Quora.html" class="project-card">
+                <div class="project-img-placeholder quora-banner">
+                    <i class="fa-brands fa-quora"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Layout</span>
+                        <span>Forms</span>
+                        <span>CSS Variables</span>
+                    </div>
+                    <h3>Quora UI Mockup</h3>
+                    <p>A replica of the Quora user interface with post modules, navigation lists, simulated upvote counters, state selections, and interactive radio feedback buttons.</p>
+                    <span class="project-link-label">Launch Assignment <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </a>
+
+            <!-- Project 2: WebNova SaaS -->
+            <a href="site.html" class="project-card">
+                <div class="project-img-placeholder saas-banner">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Flexbox</span>
+                        <span>Modern UI</span>
+                        <span>SaaS Layout</span>
+                    </div>
+                    <h3>WebNova Landing Page</h3>
+                    <p>A premium dark/blue SaaS landing page layout featuring a stylized header, card hover translations, responsive flex columns, and a clean modern footer.</p>
+                    <span class="project-link-label">Launch Assignment <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </a>
+
+            <!-- Project 3: Ozymandias Poem -->
+            <a href="p1css.html" class="project-card">
+                <div class="project-img-placeholder poem-banner">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Typography</span>
+                        <span>CSS Homework</span>
+                        <span>Inputs</span>
+                    </div>
+                    <h3>Ozymandias Poem Layout</h3>
+                    <p>A stylized typography reading sheet featuring Percy Bysshe Shelley's famous poem, formatted with a customized brown background, a comments area, and clean buttons.</p>
+                    <span class="project-link-label">Launch Assignment <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Workspace Skill Proficiency</h2>
+        <div class="skills-grid-new">
+            <!-- Skill 1 -->
+            <div class="skill-bar-card">
+                <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML5 Markup</span>
+                    <span class="skill-percentage">95%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 95%"></div>
+                </div>
+            </div>
+            <!-- Skill 2 -->
+            <div class="skill-bar-card">
+                <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> CSS3 Stylesheets</span>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 90%"></div>
+                </div>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-bar-card">
+                <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-brands fa-js"></i> UI JavaScript</span>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 85%"></div>
+                </div>
+            </div>
+            <!-- Skill 4 -->
+            <div class="skill-bar-card">
+                <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-solid fa-wand-magic-sparkles"></i> Responsive UI Design</span>
+                    <span class="skill-percentage">92%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 92%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Modal (Glassmorphism Contact Modal) -->
+    <div id="helpModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title">How can I help you?</h2>
+            <p class="modal-desc">Fill out this quick form and your message will be saved directly into the local Admin Inbox dashboard.</p>
+            
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required placeholder="Describe what you need help with..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Inbox Dashboard Modal -->
+    <div id="adminInboxModal" class="modal-overlay">
+        <div class="modal-card modal-card-large">
+            <button class="modal-close" onclick="closeAdminInbox()">&times;</button>
+            <h2 class="modal-title"><i class="fa-solid fa-database"></i> Local Message Inbox</h2>
+            <p class="modal-desc">Review contact queries stored locally via `localStorage` (PIN Authorized).</p>
+            
+            <div class="inbox-actions">
+                <button class="btn btn-secondary btn-sm" onclick="clearAllMessages()"><i class="fa-solid fa-trash-sweep"></i> Clear All</button>
+            </div>
+
+            <div id="inbox-list" class="inbox-list">
+                <!-- Messages render here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Anokhpreet Singh. Central Hub & Portals. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Interactive JS Scripts -->
+    <script>
+        // Custom cursor glow movement
+        const cursor = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Modal management
+        const modal = document.getElementById('helpModal');
+        const adminModal = document.getElementById('adminInboxModal');
+        
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+        
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        function closeAdminInbox() {
+            adminModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside of the card content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            } else if (event.target === adminModal) {
+                closeAdminInbox();
+            }
+        }
+
+        // Theme management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('hub-theme') || 'theme-midnight';
+            document.body.className = savedTheme;
+        }
+
+        function toggleTheme() {
+            const current = document.body.className;
+            const next = current === 'theme-midnight' ? 'theme-aurora' : 'theme-midnight';
+            document.body.className = next;
+            localStorage.setItem('hub-theme', next);
+        }
+
+        // Message Inbox local storage engine
+        function seedMockMessages() {
+            const messages = JSON.parse(localStorage.getItem('inbox-messages') || '[]');
+            if (messages.length === 0) {
+                const mock = [
+                    { 
+                        id: 1, 
+                        name: "Elon Musk", 
+                        email: "elon@spacex.com", 
+                        message: "Hey Anokhpreet, saw your JEE 2024 page! We need developers to design control panel dashboards at SpaceX. Let's schedule a chat!", 
+                        time: new Date(Date.now() - 7200000).toLocaleString() 
+                    },
+                    { 
+                        id: 2, 
+                        name: "Jane Doe", 
+                        email: "jane@webnova.io", 
+                        message: "The layout design on the WebNova landing page looks amazing. The responsive cards stack flawlessly on mobile.", 
+                        time: new Date(Date.now() - 3600000).toLocaleString() 
+                    }
+                ];
+                localStorage.setItem('inbox-messages', JSON.stringify(mock));
+            }
+            updateInboxCount();
+        }
+
+        function updateInboxCount() {
+            const messages = JSON.parse(localStorage.getItem('inbox-messages') || '[]');
+            const badge = document.getElementById('inbox-count');
+            badge.innerText = messages.length;
+            if (messages.length > 0) {
+                badge.style.display = 'inline-flex';
+            } else {
+                badge.style.display = 'none';
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const newMsg = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                message: message,
+                time: new Date().toLocaleString()
+            };
+            
+            const messages = JSON.parse(localStorage.getItem('inbox-messages') || '[]');
+            messages.push(newMsg);
+            localStorage.setItem('inbox-messages', JSON.stringify(messages));
+            
+            alert(`Hi ${name}, your feedback has been received and saved locally. Open the Admin Inbox (inbox icon in nav) to review it!`);
+            closeModal();
+            document.getElementById('contactForm').reset();
+            updateInboxCount();
+        }
+
+        // Admin Security PIN Gate
+        function openAdminGate() {
+            const pin = prompt("Enter Admin Passcode to view submissions (PIN: 1234):");
+            if (pin === "1234") {
+                openAdminInbox();
+            } else if (pin !== null) {
+                alert("Incorrect Passcode! Access Denied.");
+            }
+        }
+
+        // Render Inbox list
+        function openAdminInbox() {
+            renderInbox();
+            adminModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderInbox() {
+            const list = document.getElementById('inbox-list');
+            const messages = JSON.parse(localStorage.getItem('inbox-messages') || '[]');
+            list.innerHTML = '';
+            
+            if (messages.length === 0) {
+                list.innerHTML = '<div class="no-msg-slate"><i class="fa-regular fa-folder-open"></i> No messages in inbox. Send some feedback to fill it up!</div>';
+                return;
+            }
+            
+            messages.forEach(msg => {
+                const card = document.createElement('div');
+                card.className = 'inbox-item-card';
+                card.innerHTML = `
+                    <div class="inbox-item-header">
+                        <span class="inbox-sender"><i class="fa-solid fa-user"></i> ${escapeHtml(msg.name)}</span>
+                        <span class="inbox-time"><i class="fa-regular fa-clock"></i> ${msg.time}</span>
+                    </div>
+                    <div class="inbox-email"><i class="fa-solid fa-envelope"></i> ${escapeHtml(msg.email)}</div>
+                    <p class="inbox-body-text">${escapeHtml(msg.message)}</p>
+                    <div class="inbox-item-actions">
+                        <button class="btn-delete" onclick="deleteMessage(${msg.id})"><i class="fa-solid fa-trash"></i> Delete</button>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        function deleteMessage(id) {
+            let messages = JSON.parse(localStorage.getItem('inbox-messages') || '[]');
+            messages = messages.filter(msg => msg.id !== id);
+            localStorage.setItem('inbox-messages', JSON.stringify(messages));
+            renderInbox();
+            updateInboxCount();
+        }
+
+        function clearAllMessages() {
+            if (confirm("Are you sure you want to clear all inbox messages?")) {
+                localStorage.setItem('inbox-messages', JSON.stringify([]));
+                renderInbox();
+                updateInboxCount();
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.innerText = text;
+            return div.innerHTML;
+        }
+
+        // Initialize state
+        window.onload = function() {
+            initTheme();
+            seedMockMessages();
+        }
+    </script>
+</body>
+
+</html>
